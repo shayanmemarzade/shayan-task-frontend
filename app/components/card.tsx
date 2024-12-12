@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { Character } from '../model/character'
 
-type Props = {
+interface Props {
   character: Character
 }
 
@@ -38,7 +38,7 @@ export default function Card({ character }: Props) {
         </div>
         <div className="section">
           <span className="text-gray-400 block text-sm">Last known location:</span>
-          <a href={character.location.url} rel="noopener noreferrer" target="_blank" className=""> {character.location.name}</a>
+          <a href={character.location.url} rel="noopener noreferrer" target="_blank">{character.location.name}</a>
         </div>
       </div>
     </article>

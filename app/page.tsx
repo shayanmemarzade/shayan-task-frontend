@@ -1,6 +1,6 @@
 import Card from "./components/card";
 import Dropdown from "./components/dropdown";
-import { genders, statuses } from "./consts/filtersOptions";
+import { genders, statuses } from "./lib/constants";
 import { Character } from './model/character';
 
 export const dynamic = 'force-dynamic';
@@ -25,7 +25,7 @@ export default async function Home({ searchParams }: PageProps) {
       <div className="max-w-7xl mx-auto mb-10 px-5">
         <form className="flex gap-10">
           <Dropdown value={status} label="Status" queryParam="status" options={statuses} />
-          <Dropdown value={gender} label="Sender" queryParam="gender" options={genders} />
+          <Dropdown value={gender} label="Gender" queryParam="gender" options={genders} />
         </form>
       </div>
       <div className="py-10 bg-slate-800">
